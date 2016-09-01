@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 18px;
+    background-color: #3c3c3c;
+}
+.question {
+    max-width: 350px;
+    margin: 70px auto;
+    padding: 35px;
+    background-color: lightgrey;
+    border-style: solid;
+    border-radius: 15px;
+    box-shadow: 1px 2px 11px 3px #000;
+    border-color: black;
+}
+.answer {
+    max-width: 340px;
+    max-height: 200px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: gold;
+}
+.ng-invalid.ng-dirty {
+    border-color: red;
+}
+.error-block {
+    font-size: 15px;
+    color:red;
+}
+label {
+    font-size: 20px;
+}

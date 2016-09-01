@@ -1,5 +1,10 @@
 {
-    "devDependencies": {
-        "lodash": "4.10.0"
+    "name": "Angular Task",
+    "version": "2.0",
+    "author": "Elias Stickney aka Kepler",
+    "dependencies": {
+        "angular": "1.5.7",
+        "angular-ui-router": "0.3.1",
+        "lodash": "4.13.1"
     }
 }

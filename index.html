@@ -1,12 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="angularTraining">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>AngularTraining</title>
+    <link rel="stylesheet" type="text/css" href="app/css/style.css">
+    <script src="node_modules/lodash/lodash.js"></script>
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
 </head>
 <body>
-
-<script src="https://cdn.jsdelivr.net/lodash/4.10.0/lodash.js"></script>
+<div class="question">
+    <form name="userForm" novalidate>
+        <div class="form-group">
+            <label>Name:</label>
+            <input type="text" name="name" ng-model="username" class="form-control" placeholder="Enter your name" required ng-model-options="{debounce: 150}" username>
+            <p ng-show="userForm.name.$error.minlength" class="error-block">name is too short</p>
+            <p ng-show="userForm.name.$error.username" class="error-block">enter only letters with capitalized first</p>
+        </div>
+        <div class="form-group">
+            <label>Age:</label>
+            <input type="text" ng-model="age" name="age" class="form-control" placeholder="Enter your age" required ng-model-options="{debounce: 150}" age>
+            <p ng-show="userForm.age.$error.age" class="error-block">should be in 18-65 year old distance</p>
+        </div>
+        <div class="form-group">
+            <label>Date:</label>
+            <input type="text" ng-model="date" name="date" class="form-control" placeholder="DAY/MONTH/YEAR" required ng-model-options="{debounce: 150}" date>
+            <p ng-show="userForm.date.$error.date" class="error-block">use DAY/MONTH/YEAR format</p>
+        </div>
+    </form>
+    <br/>
+    <div class="answer">
+        <p class="lead">Hello! So,</p>
+        <p class="lead">Your name is {{username}}!</p>
+        <p class="lead">Your age is {{age}}.</p>
+        <p class="lead">Your chosen date is {{date}}.</p>
+    </div>
+</div>
 <script src="scope.js"></script>
+<script type="text/javascript" src="app/js/validation.js"></script>
 </body>
 </html>
